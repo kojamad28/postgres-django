@@ -1,3 +1,3 @@
-# Basic Postgres Python
+# Postgres Django
 
-This repository provides a basic python environment connected with PostgreSQL database.
+This repository provides a Django project templated connected with PostgreSQL database.
