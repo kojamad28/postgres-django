@@ -7,5 +7,7 @@ django
 django-environ
 gunicorn
 pytest-django
+pytest-randomly
+pytest-cov
 factory-boy
 django-structlog
