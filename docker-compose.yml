@@ -27,6 +27,7 @@ services:
     depends_on:
       - postgres
   nginx:
+    image: kojamad28/nginx
     container_name: nginx
     build: ./nginx
     volumes:
