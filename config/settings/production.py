@@ -8,7 +8,7 @@ from .base import *  # noqa
 SECRET_KEY = env("SECRET_KEY", default="django-secretkey")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
         env("IP_ADDRESS"), "example.com", "www.example.com", "localhost"
