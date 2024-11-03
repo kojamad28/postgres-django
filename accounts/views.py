@@ -7,18 +7,18 @@ from .forms import UserLoginForm, ContactForm
 
 class IndexView(TemplateView):
 
-    template_name = 'accounts/index.html'
+    template_name = "accounts/index.html"
 
 
 class UserLoginView(LoginView):
 
     form_class = UserLoginForm
-    template_name = 'accounts/login.html'
+    template_name = "accounts/login.html"
 
 
 class UserHomeView(LoginRequiredMixin, TemplateView):
 
-    template_name = 'accounts/home.html'
+    template_name = "accounts/home.html"
 
 
 class UserLogoutView(LogoutView):
@@ -29,8 +29,8 @@ class UserLogoutView(LogoutView):
 class ContactFormView(FormView):
 
     form_class = ContactForm
-    template_name = 'accounts/contact.html'
-    success_url = 'accounts:contact'
+    template_name = "accounts/contact.html"
+    success_url = "accounts:contact"
 
     def form_valid(self, form):
         form.send_email()
@@ -39,4 +39,4 @@ class ContactFormView(FormView):
 
 class PrivacyPolicyView(TemplateView):
 
-    template_name = 'accounts/privacy_policy.html'
+    template_name = "accounts/privacy_policy.html"

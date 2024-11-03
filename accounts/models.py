@@ -12,7 +12,7 @@ class CustomUserManager(BaseUserManager):
     def create_user(self, username, email, password=None):
 
         if not username:
-            raise ValueError('Users must have a username.')
+            raise ValueError("Users must have a username.")
 
         user = self.model(
             username=username,
@@ -40,29 +40,29 @@ class CustomUser(AbstractBaseUser):
         editable=False
     )
     username = models.CharField(
-        verbose_name=_('username'),
+        verbose_name=_("username"),
         max_length=20,
         unique=True
     )
     email = models.EmailField(
-        verbose_name=_('email address'),
+        verbose_name=_("email address"),
         max_length=254,
         blank=True
     )
     is_active = models.BooleanField(
-        verbose_name=_('active'),
+        verbose_name=_("active"),
         default=True
     )
     is_admin = models.BooleanField(
-        verbose_name=_('admin'),
+        verbose_name=_("admin"),
         default=False
     )
 
     objects = CustomUserManager()
 
-    USERNAME_FIELD = 'username'
-    EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['email']
+    USERNAME_FIELD = "username"
+    EMAIL_FIELD = "email"
+    REQUIRED_FIELDS = ["email"]
 
     def __str__(self):
         return self.username

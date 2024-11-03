@@ -5,12 +5,12 @@ from .views import (
     ContactFormView, PrivacyPolicyView
 )
 
-app_name = 'accounts'
+app_name = "accounts"
 urlpatterns = [
-    path('', IndexView.as_view(), name='index'),
-    path('login', UserLoginView.as_view(), name='login'),
-    path('home', UserHomeView.as_view(), name='home'),
-    path('logout', UserLogoutView.as_view(), name='logout'),
-    path('contact', ContactFormView.as_view(), name='contact'),
-    path('privacy-policy', PrivacyPolicyView.as_view(), name='privacy_policy')
+    path("", IndexView.as_view(), name="index"),
+    path("login", UserLoginView.as_view(), name="login"),
+    path("home", UserHomeView.as_view(), name="home"),
+    path("logout", UserLogoutView.as_view(), name="logout"),
+    path("contact", ContactFormView.as_view(), name="contact"),
+    path("privacy-policy", PrivacyPolicyView.as_view(), name="privacy_policy")
 ]
