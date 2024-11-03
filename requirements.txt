@@ -5,6 +5,7 @@ tox
 psycopg
 django
 django-environ
+django-silk
 gunicorn
 pytest-django
 pytest-randomly

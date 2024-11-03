@@ -29,8 +29,9 @@ env = environ.Env()
 env.read_env(str(BASE_DIR / ".env"))
 
 urlpatterns = [
-    path('', include('accounts.urls')),
-    path(env.get_value("ADMIN_URL", default="admin/"), admin.site.urls)
+    path('', include("accounts.urls")),
+    path(env.get_value("ADMIN_URL", default="admin/"), admin.site.urls),
+    path(env.get_value("SILK_URL", default="silk/"), include("silk.urls", namespace="silk")),
 ]
 
 if settings.DEBUG:
