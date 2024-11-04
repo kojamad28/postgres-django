@@ -2,17 +2,33 @@
 
 This repository provides a Django project template connected with PostgreSQL database.
 
-## How to use
+
+## Usage
+
+Clone this repository and build a docker image.
+
+```bash
+docker compose build
+```
+
+Then migrate the database.
 
 ```bash
 docker compose build
 docker compose run django python manage.py makemigrations accounts
 docker compose run django python manage.py migrate accounts
 docker compose run django python manage.py migrate
-docker compose run django python manage.py createsuperuser
-docker compose up -d --remove-orphans
 ```
 
+Then create a superuser.
+```bash
+docker compose run django python manage.py createsuperuser
+```
+
+
+## Note
+
+Add migrations directories for git tracking.
 ```.gitignore
 # Django stuff:
 *.log
