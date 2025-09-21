@@ -1,7 +1,5 @@
 psycopg
-django
 django-environ
-gunicorn
 django-structlog
 django-extensions
 django-model-utils

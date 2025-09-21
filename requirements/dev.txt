@@ -1,3 +1,5 @@
+gunicorn
+django
 -r common.txt
 black
 ruff
