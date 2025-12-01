@@ -10,7 +10,7 @@ class UserFactory(DjangoModelFactory):
     email = LazyAttribute(lambda u: f"{u.username}@example.com")
     password = "password"
     is_active = True
-    is_admin = False
+    is_staff = False
 
     class Meta:
         model = CustomUser
